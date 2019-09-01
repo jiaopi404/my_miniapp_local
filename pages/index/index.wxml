@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<swiper class="slides" autoplay="{{ true }}" indicator-dots="{{true}}">
+  <swiper-item>
+    <image mode="aspectFill" src="/assets/images/banner-01.png" />
+  </swiper-item>
+  <swiper-item>
+  <!-- 给高度, 内容自适应 -->
+    <image mode="aspectFill" src="/assets/images/banner-02.png" />
+  </swiper-item>
+</swiper>
+
+<view class="grids" hover-class="none" hover-stop-propagation="false">
+    <view class="item" wx:for="{{ cate }}" wx:key="id">
+        <image src="{{ item.icon }}" />
+        <text>{{ item.name }}</text>
+    </view>
+</view>
+
+<view class="links">
+    <view class="item">
+        <image src="/assets/images/link-01.png" />
+    </view>
+    <view class="item">
+        <image src="/assets/images/link-02.png" />
+    </view>
+</view>
